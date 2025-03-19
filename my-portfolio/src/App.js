@@ -7,18 +7,20 @@ import Projects from "./components/Projects";
 import Achievements from "./components/Achievements";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import "./styles.css";
+import "./styles.css"; // Make sure styles.css exists in src/
 
 const App = () => {
   return (
     <div>
       <Header />
-      <Bio />
-      <Education />
-      <Skills />
-      <Projects />
-      <Achievements />
-      <Contact />
+      <main>
+        <Bio />
+        <Education />
+        <Skills />
+        <Projects />
+        <Achievements />
+        <Contact />
+      </main>
       <Footer />
     </div>
   );
