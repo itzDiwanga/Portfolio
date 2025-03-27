@@ -47,17 +47,14 @@ const Hero = () => {
       </div>
       
       <style jsx>{`
-        :root {
-          --accent: #5e72e4;  /* Blue accent color instead of green */
-        }
-        
         .hero {
           min-height: 100vh;
           display: flex;
           align-items: center;
           position: relative;
-          color: var(--light);
+          color: #f2f2f2;
           overflow: hidden;
+          font-family: 'Poppins', sans-serif;
         }
         
         .hero-bg {
@@ -66,7 +63,7 @@ const Hero = () => {
           left: 0;
           width: 100%;
           height: 100%;
-          background: linear-gradient(135deg, #1a1f36, #283046, #2b354f);
+          background: linear-gradient(135deg, #21242b, #292d36, #323741);
           z-index: -1;
         }
         
@@ -77,7 +74,7 @@ const Hero = () => {
           left: 0;
           width: 100%;
           height: 100%;
-          background: radial-gradient(circle at 20% 30%, rgba(94, 114, 228, 0.2) 0%, transparent 60%);
+          background: radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.15) 0%, transparent 60%);
         }
         
         .hero-container {
@@ -99,17 +96,37 @@ const Hero = () => {
           font-size: 3.5rem;
           margin-bottom: 1rem;
           line-height: 1.2;
+          font-weight: 700;
+          letter-spacing: -0.5px;
         }
         
         .hero-content h1 span {
-          color: var(--accent);
+          color: #d4af37; /* Gold color matching your top */
+          position: relative;
+        }
+        
+        .hero-content h1 span::after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: #d4af37;
+          animation: underline 1.5s ease forwards;
+          animation-delay: 2s;
+        }
+        
+        @keyframes underline {
+          to { width: 100%; }
         }
         
         .hero-content h2 {
           font-size: 1.5rem;
           font-weight: 500;
           margin-bottom: 0.5rem;
-          color: #a4b2ef;
+          color: #e0e0e0;
+          letter-spacing: 0.5px;
         }
         
         .job-title-container {
@@ -122,13 +139,14 @@ const Hero = () => {
         .job-title {
           font-size: 1.3rem;
           font-weight: 500;
-          color: var(--accent);
+          color: #d4af37; /* Gold color matching your top */
+          letter-spacing: 0.5px;
         }
         
         .cursor {
           font-size: 1.3rem;
           font-weight: 700;
-          color: var(--accent);
+          color: #d4af37;
           animation: blink 1s infinite;
           margin-left: 2px;
         }
@@ -147,6 +165,8 @@ const Hero = () => {
           font-size: 1.1rem;
           color: rgba(255, 255, 255, 0.8);
           line-height: 1.7;
+          letter-spacing: 0.2px;
+          font-weight: 300;
         }
         
         .hero-buttons {
@@ -156,33 +176,35 @@ const Hero = () => {
         }
         
         .btn {
-          padding: 0.8rem 1.5rem;
-          background-color: var(--accent);
-          color: white;
+          padding: 0.9rem 1.7rem;
+          background-color: #d4af37;
+          color: #21242b;
           border: none;
-          border-radius: 5px;
-          font-weight: 500;
+          border-radius: 30px;
+          font-weight: 600;
           text-decoration: none;
           transition: all 0.3s ease;
-          box-shadow: 0 4px 15px rgba(94, 114, 228, 0.3);
+          box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+          letter-spacing: 0.5px;
         }
         
         .btn:hover {
           transform: translateY(-3px);
-          box-shadow: 0 6px 20px rgba(94, 114, 228, 0.4);
+          box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+          background-color: #e5c158;
         }
         
         .btn-outline {
           background: transparent;
-          border: 2px solid var(--accent);
-          color: var(--accent);
+          border: 2px solid #d4af37;
+          color: #d4af37;
           box-shadow: none;
         }
         
         .btn-outline:hover {
-          background: var(--accent);
-          color: var(--light);
-          box-shadow: 0 6px 20px rgba(94, 114, 228, 0.4);
+          background: #d4af37;
+          color: #21242b;
+          box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
         }
         
         .hero-image {
@@ -193,12 +215,22 @@ const Hero = () => {
           position: relative;
         }
         
+        .hero-image::before {
+          content: '';
+          position: absolute;
+          width: 380px;
+          height: 380px;
+          border: 2px solid rgba(212, 175, 55, 0.3);
+          border-radius: 50%;
+          z-index: -1;
+        }
+        
         .hero-image::after {
           content: '';
           position: absolute;
           width: 400px;
           height: 400px;
-          background: radial-gradient(circle, rgba(94, 114, 228, 0.1) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
           z-index: -1;
         }
         
@@ -207,7 +239,7 @@ const Hero = () => {
           height: 350px;
           object-fit: cover;
           border-radius: 50%;
-          border: 5px solid var(--accent);
+          border: 5px solid #d4af37;
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
         
@@ -219,6 +251,11 @@ const Hero = () => {
           
           .hero-content h1 {
             font-size: 2.5rem;
+          }
+          
+          .hero-content h1 span::after {
+            left: 50%;
+            transform: translateX(-50%);
           }
           
           .job-title-container {
@@ -234,6 +271,11 @@ const Hero = () => {
           .hero-image img {
             width: 250px;
             height: 250px;
+          }
+          
+          .hero-image::before {
+            width: 280px;
+            height: 280px;
           }
         }
       `}</style>
