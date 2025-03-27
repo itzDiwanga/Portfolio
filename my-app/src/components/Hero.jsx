@@ -24,7 +24,7 @@ const Hero = () => {
       <div className="hero-bg"></div>
       <div className="container hero-container">
         <div className="hero-content">
-          <h1>Hi, I'm <span>Diwanga Munasinghe</span></h1>
+          <h1>Hiiiii, I'm <span>Diwanga Munasinghe</span></h1>
           <h2>Computer Science Undergraduate</h2>
           <div className="job-title-container">
             <span className="job-title">{text}</span>

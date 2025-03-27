@@ -60,9 +60,9 @@ const Navbar = () => {
         }
         
         .navbar.scrolled {
-          background-color: rgba(63, 37, 99, 0.95);
+          background-color: rgba(0, 0, 0, 0.95);
           backdrop-filter: blur(10px);
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
           padding: 0.5rem 0;
         }
         
@@ -83,8 +83,8 @@ const Navbar = () => {
         }
         
         .logo a:hover {
-          color: #e9d5ff;
-          text-shadow: 0 0 10px rgba(233, 213, 255, 0.5);
+          color: #8067f0;
+          text-shadow: 0 0 10px rgba(128, 103, 240, 0.5);
         }
         
         .nav-links {
@@ -111,12 +111,12 @@ const Navbar = () => {
           left: 0;
           width: 0;
           height: 2px;
-          background-color: #e9d5ff;
+          background-color: #8067f0;
           transition: width 0.3s ease;
         }
         
         .nav-links li a:hover {
-          color: #e9d5ff;
+          color: #8067f0;
         }
         
         .nav-links li a:hover::after {
@@ -162,7 +162,7 @@ const Navbar = () => {
             left: 0;
             width: 100%;
             height: 100vh;
-            background-color: rgba(63, 37, 99, 0.98);
+            background-color: rgba(0, 0, 0, 0.98);
             flex-direction: column;
             justify-content: center;
             align-items: center;
