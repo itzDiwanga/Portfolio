@@ -1,6 +1,17 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Hero = () => {
+  const [jobIndex, setJobIndex] = useState(0);
+  const jobs = ["UI/UX Designer", "Frontend Developer"];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setJobIndex((prevIndex) => (prevIndex + 1) % jobs.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id="home" className="hero">
       <div className="hero-bg"></div>
@@ -8,6 +19,9 @@ const Hero = () => {
         <div className="hero-content">
           <h1>Hi, I'm <span>Diwanga Munasinghe</span></h1>
           <h2>Computer Science Undergraduate</h2>
+          <div className="job-title-container">
+            <h3 className="job-title">{jobs[jobIndex]}</h3>
+          </div>
           <p>
             I am currently pursuing my undergraduate studies at the Informatics Institute of Technology (IIT), 
             affiliated with the University of Westminster, majoring in BSc (Hons) with a specialization in 
@@ -25,6 +39,10 @@ const Hero = () => {
       </div>
       
       <style jsx>{`
+        :root {
+          --accent: #5e72e4;  /* Blue accent color instead of green */
+        }
+        
         .hero {
           min-height: 100vh;
           display: flex;
@@ -40,7 +58,7 @@ const Hero = () => {
           left: 0;
           width: 100%;
           height: 100%;
-          background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+          background: linear-gradient(135deg, #1a1f36, #283046, #2b354f);
           z-index: -1;
         }
         
@@ -51,7 +69,7 @@ const Hero = () => {
           left: 0;
           width: 100%;
           height: 100%;
-          background: radial-gradient(circle at 20% 30%, rgba(23, 180, 134, 0.2) 0%, transparent 60%);
+          background: radial-gradient(circle at 20% 30%, rgba(94, 114, 228, 0.2) 0%, transparent 60%);
         }
         
         .hero-container {
@@ -76,14 +94,40 @@ const Hero = () => {
         }
         
         .hero-content h1 span {
-          color: var(--primary);
+          color: var(--accent);
         }
         
         .hero-content h2 {
           font-size: 1.5rem;
           font-weight: 500;
+          margin-bottom: 0.5rem;
+          color: #a4b2ef;
+        }
+        
+        .job-title-container {
+          height: 35px;
           margin-bottom: 1.5rem;
-          color: #a0dacd;
+          overflow: hidden;
+        }
+        
+        .job-title {
+          font-size: 1.3rem;
+          font-weight: 500;
+          color: var(--accent);
+          position: relative;
+          display: inline-block;
+          animation: fadeInOut 3s infinite;
+        }
+        
+        @keyframes fadeInOut {
+          0%, 100% {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          10%, 90% {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
         
         .hero-content p {
@@ -101,32 +145,32 @@ const Hero = () => {
         
         .btn {
           padding: 0.8rem 1.5rem;
-          background-color: var(--primary);
+          background-color: var(--accent);
           color: white;
           border: none;
           border-radius: 5px;
           font-weight: 500;
           text-decoration: none;
           transition: all 0.3s ease;
-          box-shadow: 0 4px 15px rgba(23, 180, 134, 0.3);
+          box-shadow: 0 4px 15px rgba(94, 114, 228, 0.3);
         }
         
         .btn:hover {
           transform: translateY(-3px);
-          box-shadow: 0 6px 20px rgba(23, 180, 134, 0.4);
+          box-shadow: 0 6px 20px rgba(94, 114, 228, 0.4);
         }
         
         .btn-outline {
           background: transparent;
-          border: 2px solid var(--primary);
-          color: var(--primary);
+          border: 2px solid var(--accent);
+          color: var(--accent);
           box-shadow: none;
         }
         
         .btn-outline:hover {
-          background: var(--primary);
+          background: var(--accent);
           color: var(--light);
-          box-shadow: 0 6px 20px rgba(23, 180, 134, 0.4);
+          box-shadow: 0 6px 20px rgba(94, 114, 228, 0.4);
         }
         
         .hero-image {
@@ -142,7 +186,7 @@ const Hero = () => {
           position: absolute;
           width: 400px;
           height: 400px;
-          background: radial-gradient(circle, rgba(23, 180, 134, 0.1) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(94, 114, 228, 0.1) 0%, transparent 70%);
           z-index: -1;
         }
         
@@ -151,7 +195,7 @@ const Hero = () => {
           height: 350px;
           object-fit: cover;
           border-radius: 50%;
-          border: 5px solid var(--primary);
+          border: 5px solid var(--accent);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
         
@@ -163,6 +207,12 @@ const Hero = () => {
           
           .hero-content h1 {
             font-size: 2.5rem;
+          }
+          
+          .job-title-container {
+            justify-content: center;
+            text-align: center;
+            width: 100%;
           }
           
           .hero-buttons {
