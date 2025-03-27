@@ -45,6 +45,8 @@ const Navbar = () => {
       </div>
       
       <style jsx>{`
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
         .navbar {
           position: fixed;
           top: 0;
@@ -54,11 +56,13 @@ const Navbar = () => {
           background-color: transparent;
           transition: all 0.3s ease;
           padding: 1rem 0;
+          font-family: 'Montserrat', sans-serif;
         }
         
         .navbar.scrolled {
-          background-color: var(--dark);
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          background-color: rgba(63, 37, 99, 0.95);
+          backdrop-filter: blur(10px);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
           padding: 0.5rem 0;
         }
         
@@ -66,30 +70,57 @@ const Navbar = () => {
           display: flex;
           justify-content: space-between;
           align-items: center;
+          padding: 0 2rem;
         }
         
         .logo a {
-          color: var(--light);
+          color: #ffffff;
           text-decoration: none;
           font-size: 1.5rem;
           font-weight: 700;
+          letter-spacing: 0.5px;
+          transition: all 0.3s ease;
+        }
+        
+        .logo a:hover {
+          color: #e9d5ff;
+          text-shadow: 0 0 10px rgba(233, 213, 255, 0.5);
         }
         
         .nav-links {
           display: flex;
           list-style: none;
           gap: 2rem;
+          margin: 0;
+          padding: 0;
         }
         
         .nav-links li a {
-          color: var(--light);
+          color: #ffffff;
           text-decoration: none;
           font-weight: 500;
           transition: all 0.3s ease;
+          position: relative;
+          padding: 0.5rem 0;
+        }
+        
+        .nav-links li a::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: #e9d5ff;
+          transition: width 0.3s ease;
         }
         
         .nav-links li a:hover {
-          color: var(--primary);
+          color: #e9d5ff;
+        }
+        
+        .nav-links li a:hover::after {
+          width: 100%;
         }
         
         .mobile-menu-btn {
@@ -97,13 +128,14 @@ const Navbar = () => {
           flex-direction: column;
           gap: 6px;
           cursor: pointer;
+          z-index: 1001;
         }
         
         .mobile-menu-btn span {
           display: block;
           width: 30px;
           height: 3px;
-          background-color: var(--light);
+          background-color: #ffffff;
           transition: all 0.3s ease;
         }
         
@@ -112,22 +144,36 @@ const Navbar = () => {
             display: flex;
           }
           
-          .nav-links {
-            position: fixed;
-            top: 70px;
-            left: 0;
-            width: 100%;
-            background-color: var(--dark);
-            flex-direction: column;
-            align-items: center;
-            padding: 2rem 0;
-            gap: 1.5rem;
-            transform: translateY(-150%);
-            transition: all 0.3s ease;
+          .mobile-menu-btn span:nth-child(1) {
+            transform: ${mobileMenuOpen ? 'rotate(45deg) translate(8px, 8px)' : 'rotate(0)'};
           }
           
-          .nav-links.active {
-            transform: translateY(0);
+          .mobile-menu-btn span:nth-child(2) {
+            opacity: ${mobileMenuOpen ? '0' : '1'};
+          }
+          
+          .mobile-menu-btn span:nth-child(3) {
+            transform: ${mobileMenuOpen ? 'rotate(-45deg) translate(7px, -7px)' : 'rotate(0)'};
+          }
+          
+          .nav-links {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(63, 37, 99, 0.98);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 0;
+            gap: 2rem;
+            transform: ${mobileMenuOpen ? 'translateX(0)' : 'translateX(100%)'};
+            transition: all 0.4s ease;
+          }
+          
+          .nav-links li a {
+            font-size: 1.5rem;
           }
         }
       `}</style>
