@@ -1,16 +1,43 @@
 import React, { useState, useEffect } from 'react'
 
 const Hero = () => {
-  const [jobIndex, setJobIndex] = useState(0);
-  const jobs = ["UI/UX Designer", "Frontend Developer"];
-
+  const [displayText, setDisplayText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+  
+  const jobTitles = ["UI/UX Designer", "Frontend Developer"];
+  const delayBetweenWords = 2000; // Pause time after a word is fully displayed
+  
   useEffect(() => {
-    const interval = setInterval(() => {
-      setJobIndex((prevIndex) => (prevIndex + 1) % jobs.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
+    const handleTyping = () => {
+      const currentIndex = loopNum % jobTitles.length;
+      const fullText = jobTitles[currentIndex];
+      
+      // Set the typing/deleting speed
+      setTypingSpeed(isDeleting ? 80 : 150);
+      
+      // Logic for typing and deleting text
+      setDisplayText(prev => 
+        isDeleting 
+          ? fullText.substring(0, prev.length - 1) 
+          : fullText.substring(0, prev.length + 1)
+      );
+      
+      // If not deleting and completed typing
+      if (!isDeleting && displayText === fullText) {
+        setTimeout(() => setIsDeleting(true), delayBetweenWords);
+      } 
+      // If deleting and finished deleting
+      else if (isDeleting && displayText === '') {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+      }
+    };
+    
+    const timer = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [displayText, isDeleting, loopNum, typingSpeed]);
 
   return (
     <section id="home" className="hero">
@@ -20,7 +47,8 @@ const Hero = () => {
           <h1>Hi, I'm <span>Diwanga Munasinghe</span></h1>
           <h2>Computer Science Undergraduate</h2>
           <div className="job-title-container">
-            <h3 className="job-title">{jobs[jobIndex]}</h3>
+            <span className="job-title">{displayText}</span>
+            <span className="cursor">|</span>
           </div>
           <p>
             I am currently pursuing my undergraduate studies at the Informatics Institute of Technology (IIT), 
@@ -107,27 +135,27 @@ const Hero = () => {
         .job-title-container {
           height: 35px;
           margin-bottom: 1.5rem;
-          overflow: hidden;
+          display: flex;
+          align-items: center;
         }
         
         .job-title {
           font-size: 1.3rem;
           font-weight: 500;
           color: var(--accent);
-          position: relative;
-          display: inline-block;
-          animation: fadeInOut 3s infinite;
         }
         
-        @keyframes fadeInOut {
-          0%, 100% {
-            opacity: 0;
-            transform: translateY(10px);
-          }
-          10%, 90% {
-            opacity: 1;
-            transform: translateY(0);
-          }
+        .cursor {
+          font-size: 1.3rem;
+          font-weight: 700;
+          color: var(--accent);
+          animation: blink 1s infinite;
+          margin-left: 2px;
+        }
+        
+        @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0; }
         }
         
         .hero-content p {
