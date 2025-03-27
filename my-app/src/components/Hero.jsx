@@ -1,43 +1,23 @@
 import React, { useState, useEffect } from 'react'
 
 const Hero = () => {
-  const [displayText, setDisplayText] = useState('');
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [loopNum, setLoopNum] = useState(0);
-  const [typingSpeed, setTypingSpeed] = useState(150);
+  const [text, setText] = useState('');
+  const [isTypingComplete, setIsTypingComplete] = useState(false);
   
-  const jobTitles = ["UI/UX Designer", "Frontend Developer"];
-  const delayBetweenWords = 2000; // Pause time after a word is fully displayed
+  const fullText = "UI/UX Designer & Frontend Developer";
+  const typingSpeed = 100; // milliseconds per character
   
   useEffect(() => {
-    const handleTyping = () => {
-      const currentIndex = loopNum % jobTitles.length;
-      const fullText = jobTitles[currentIndex];
+    if (text.length < fullText.length) {
+      const timeout = setTimeout(() => {
+        setText(fullText.substring(0, text.length + 1));
+      }, typingSpeed);
       
-      // Set the typing/deleting speed
-      setTypingSpeed(isDeleting ? 80 : 150);
-      
-      // Logic for typing and deleting text
-      setDisplayText(prev => 
-        isDeleting 
-          ? fullText.substring(0, prev.length - 1) 
-          : fullText.substring(0, prev.length + 1)
-      );
-      
-      // If not deleting and completed typing
-      if (!isDeleting && displayText === fullText) {
-        setTimeout(() => setIsDeleting(true), delayBetweenWords);
-      } 
-      // If deleting and finished deleting
-      else if (isDeleting && displayText === '') {
-        setIsDeleting(false);
-        setLoopNum(loopNum + 1);
-      }
-    };
-    
-    const timer = setTimeout(handleTyping, typingSpeed);
-    return () => clearTimeout(timer);
-  }, [displayText, isDeleting, loopNum, typingSpeed]);
+      return () => clearTimeout(timeout);
+    } else {
+      setIsTypingComplete(true);
+    }
+  }, [text]);
 
   return (
     <section id="home" className="hero">
@@ -47,8 +27,8 @@ const Hero = () => {
           <h1>Hi, I'm <span>Diwanga Munasinghe</span></h1>
           <h2>Computer Science Undergraduate</h2>
           <div className="job-title-container">
-            <span className="job-title">{displayText}</span>
-            <span className="cursor">|</span>
+            <span className="job-title">{text}</span>
+            <span className={`cursor ${isTypingComplete ? 'hidden' : ''}`}>|</span>
           </div>
           <p>
             I am currently pursuing my undergraduate studies at the Informatics Institute of Technology (IIT), 
@@ -62,7 +42,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="hero-image">
-          <img src="/profile.jpg" alt="Diwanga Munasinghe" />
+          <img src="/profile2.jpg" alt="Diwanga Munasinghe" />
         </div>
       </div>
       
@@ -151,6 +131,10 @@ const Hero = () => {
           color: var(--accent);
           animation: blink 1s infinite;
           margin-left: 2px;
+        }
+        
+        .cursor.hidden {
+          opacity: 0;
         }
         
         @keyframes blink {
