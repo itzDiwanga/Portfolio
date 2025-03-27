@@ -47,14 +47,16 @@ const Hero = () => {
       </div>
       
       <style jsx>{`
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
         .hero {
           min-height: 100vh;
           display: flex;
           align-items: center;
           position: relative;
-          color: #f2f2f2;
+          color: #2c2c2c;
           overflow: hidden;
-          font-family: 'Poppins', sans-serif;
+          font-family: 'Montserrat', sans-serif;
         }
         
         .hero-bg {
@@ -63,7 +65,7 @@ const Hero = () => {
           left: 0;
           width: 100%;
           height: 100%;
-          background: linear-gradient(135deg, #21242b, #292d36, #323741);
+          background: linear-gradient(135deg, #f5f7fa, #e8ecf1, #f5f7fa);
           z-index: -1;
         }
         
@@ -74,7 +76,7 @@ const Hero = () => {
           left: 0;
           width: 100%;
           height: 100%;
-          background: radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.15) 0%, transparent 60%);
+          background: radial-gradient(circle at 20% 30%, rgba(128, 103, 240, 0.15) 0%, transparent 60%);
         }
         
         .hero-container {
@@ -98,10 +100,11 @@ const Hero = () => {
           line-height: 1.2;
           font-weight: 700;
           letter-spacing: -0.5px;
+          color: #2c2c2c;
         }
         
         .hero-content h1 span {
-          color: #d4af37; /* Gold color matching your top */
+          color: #8067f0; /* Purple accent color */
           position: relative;
         }
         
@@ -112,7 +115,7 @@ const Hero = () => {
           left: 0;
           width: 0;
           height: 2px;
-          background-color: #d4af37;
+          background-color: #8067f0;
           animation: underline 1.5s ease forwards;
           animation-delay: 2s;
         }
@@ -125,7 +128,7 @@ const Hero = () => {
           font-size: 1.5rem;
           font-weight: 500;
           margin-bottom: 0.5rem;
-          color: #e0e0e0;
+          color: #565656;
           letter-spacing: 0.5px;
         }
         
@@ -139,14 +142,14 @@ const Hero = () => {
         .job-title {
           font-size: 1.3rem;
           font-weight: 500;
-          color: #d4af37; /* Gold color matching your top */
+          color: #8067f0; /* Purple accent color */
           letter-spacing: 0.5px;
         }
         
         .cursor {
           font-size: 1.3rem;
           font-weight: 700;
-          color: #d4af37;
+          color: #8067f0;
           animation: blink 1s infinite;
           margin-left: 2px;
         }
@@ -163,7 +166,7 @@ const Hero = () => {
         .hero-content p {
           margin-bottom: 1.5rem;
           font-size: 1.1rem;
-          color: rgba(255, 255, 255, 0.8);
+          color: #565656;
           line-height: 1.7;
           letter-spacing: 0.2px;
           font-weight: 300;
@@ -177,34 +180,34 @@ const Hero = () => {
         
         .btn {
           padding: 0.9rem 1.7rem;
-          background-color: #d4af37;
-          color: #21242b;
+          background-color: #8067f0;
+          color: #ffffff;
           border: none;
           border-radius: 30px;
           font-weight: 600;
           text-decoration: none;
           transition: all 0.3s ease;
-          box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+          box-shadow: 0 4px 15px rgba(128, 103, 240, 0.25);
           letter-spacing: 0.5px;
         }
         
         .btn:hover {
           transform: translateY(-3px);
-          box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
-          background-color: #e5c158;
+          box-shadow: 0 6px 20px rgba(128, 103, 240, 0.4);
+          background-color: #9281f5;
         }
         
         .btn-outline {
           background: transparent;
-          border: 2px solid #d4af37;
-          color: #d4af37;
+          border: 2px solid #8067f0;
+          color: #8067f0;
           box-shadow: none;
         }
         
         .btn-outline:hover {
-          background: #d4af37;
-          color: #21242b;
-          box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+          background: #8067f0;
+          color: #ffffff;
+          box-shadow: 0 6px 20px rgba(128, 103, 240, 0.4);
         }
         
         .hero-image {
@@ -220,9 +223,15 @@ const Hero = () => {
           position: absolute;
           width: 380px;
           height: 380px;
-          border: 2px solid rgba(212, 175, 55, 0.3);
+          border: 2px solid rgba(128, 103, 240, 0.3);
           border-radius: 50%;
           z-index: -1;
+          animation: pulse 3s infinite alternate;
+        }
+        
+        @keyframes pulse {
+          from { transform: scale(0.98); opacity: 0.8; }
+          to { transform: scale(1.02); opacity: 0.5; }
         }
         
         .hero-image::after {
@@ -230,7 +239,7 @@ const Hero = () => {
           position: absolute;
           width: 400px;
           height: 400px;
-          background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(128, 103, 240, 0.1) 0%, transparent 70%);
           z-index: -1;
         }
         
@@ -239,8 +248,8 @@ const Hero = () => {
           height: 350px;
           object-fit: cover;
           border-radius: 50%;
-          border: 5px solid #d4af37;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+          border: 5px solid #8067f0;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
         
         @media (max-width: 992px) {
