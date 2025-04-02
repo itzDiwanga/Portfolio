@@ -58,20 +58,19 @@ const Projects = () => {
     },
     {
       id: 7,
-      title: "Student Management System",
-      shortDescription: "Java-based system for handling student records.",
-      fullDescription: "It utilizes Java I/O libraries for handling input and output operations, such as reading from and writing to files.",
-      image: "/project-images/student-management.jpg",
-      technologies: ["Java", "File I/O"],
+      title: "Banking Transaction System",
+      shortDescription: "Developed a Python-based Banking Transaction System to monitor income, expenses, and budgets, featuring data visualization for enhanced financial planning and decision-making.",
+      image: "/Banking-image.jpg",
+      technologies: ["Java"],
       year: "2024"
     },
     {
       id: 8,
-      title: "green steps",
+      title: "Student Management System",
       shortDescription: "GUI Implementation with Tkinter and OOP principles.",
       fullDescription: "A personal finance tracker with an intuitive GUI built using Tkinter. Implemented using object-oriented programming principles for maintainable and extensible code.",
-      image: "/project-images/finance-tracker.jpg",
-      technologies: ["Python", "Tkinter", "OOP"],
+      image: "/Management-image.jpg",
+      technologies: ["Java"],
       year: "2024"
     }
   ]
