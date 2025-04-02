@@ -6,10 +6,10 @@ const Education = () => {
       id: 1,
       institution: "University of Westminster / Informatics Institute of Technology",
       degree: "BSc (Hons) Computer Science",
-      duration: "2024 - 2027 (Expected)",
+      duration: "2024 (Present)",
       details: [
-        "Year 1 - Software Development I, Mathematics for Computing, Trends in Computer Science, Computer Systems Fundamentals, Software Development II, Web Design and Development (passed 6 modules 120 credits)",
-        "Year 2 - Object Oriented Programming, Database Systems, Software Development Group Project, Client-Server Architectures, Professional Development, Human Computer Interaction and User Experience, Advanced Client-Side Development"
+        "Pursuing a degree in Computer Science with a focus on UI/UX design, web technologies, software development and database management.",
+        "Year 2: Ongoing | Year 1: Passed with 120 credits."
       ]
     },
     {

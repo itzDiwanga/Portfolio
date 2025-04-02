@@ -116,15 +116,15 @@ const Contact = () => {
             </div>
             
             <div className="social-links">
-              <a href="https://linkedin.com/in/Diwanga-Munasinghe" target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href="https://www.linkedin.com/in/diwanga-munasinghe-b97409339/" target="_blank" rel="noopener noreferrer" className="social-link">
                 <i className="fab fa-linkedin-in"></i>
               </a>
               <a href="https://github.com/itzDiwanga" target="_blank" rel="noopener noreferrer" className="social-link">
                 <i className="fab fa-github"></i>
               </a>
-              <a href="mailto:diwanga.2003@gmail.com" className="social-link">
+              {/* <a href="diwanga.2003@gmail.com" className="social-link">
                 <i className="fas fa-envelope"></i>
-              </a>
+              </a> */}
             </div>
           </div>
           

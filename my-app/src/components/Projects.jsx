@@ -6,69 +6,63 @@ const Projects = () => {
     {
       id: 1,
       title: "Mental Health Companion App",
-      shortDescription: "An application providing emotional support and guidance.",
+      shortDescription: "An application providing emotional support and guidance. The app offers features like anonymous chat forum,mood detection,chat bot,therapist dashboad and feed page",
       image: "/mental-health-app.jpg",
-      technologies: ["React Native", "Node.js", "MongoDB"],
+      technologies: ["Flutter", "Node.js", "MongoDB"],
       status: "Ongoing Project"
     },
     {
       id: 2,
-      title: "Property Search Web App",
-      shortDescription: "React-based property search app with interactive filters.",
-      fullDescription: "Developed a React-based property search web app with interactive filters, dynamic JSON data retrieval, and a responsive UI. Implemented features like a favorites list with local storage, image viewer, React Tabs for property details, and security best practices.",
+      title: "Real Estate Agent",
+      shortDescription: "Developed a React-based property search web app with interactive filters, dynamic JSON data retrieval, and a responsive UI. Implemented features like a favorites list with local storage, image viewer, React Tabs for property details, and security best practices.",
       image: "/property-search.jpg",
-      technologies: ["React", "JavaScript", "HTML", "CSS"],
+      technologies: ["React"],
       year: "2024"
     },
     {
       id: 3,
       title: "Selena Gomez Portfolio Website",
-      shortDescription: "A fully responsive React and Node based charity platform.",
-      fullDescription: "A fully responsive React and Node based charity platform showcasing the humanitarian initiatives. Features include project galleries with multimedia content, assistance request forms, volunteer registration, and media validation.",
+      shortDescription: "Created a website showcasing Selena's life, career, and achievements with a clean and responsive design.",
       image: "/Selena-website.jpg",
-      technologies: ["React", "Node.js", "MongoDB"],
+      technologies: ["HTML5","CSS"],
       year: "2024"
     },
     {
       id: 4,
       title: "Oceanauts Web Application",
-      shortDescription: "A secure and decentralized digital identity verification platform.",
-      fullDescription: "Trustify is a secure and decentralized digital identity verification platform designed to enhance trust, privacy, and efficiency in identity management. Leveraging blockchain technology, the system ensures tamper-proof identity verification.",
+      shortDescription: "A platform promoting marine conservation through educational content, interactive resources, and advocacy on ocean sustainability.",
       image: "/Oceanauts-image.jpg",
-      technologies: ["Blockchain", "React", "Node", "MongoDB"],
+      technologies: ["HTML","CSS","JavaScript"],
       year: "2024"
     },
     {
       id: 5,
       title: "Real Time Ticketing System",
-      shortDescription: "Responsive personal portfolio website with modern UI.",
-      fullDescription: "Designed and developed a responsive personal portfolio website using HTML, CSS, and JavaScript. The project features a clean, modern UI with interactive elements including hover animations effect, hover states, and smooth scrolling navigation.",
+      shortDescription: "Developed a website using React and Node.js, and a CLI using Java, enabling seamless ticket booking, live availability updates, and secure transactions.",
       image: "/Ticketing-image.jpg",
-      technologies: ["HTML", "CSS", "JavaScript"],
+      technologies: ["Java","React","Node.js"],
       year: "2024"
     },
     {
       id: 6,
       title: "Green Steps App",
-      shortDescription: "Designed an intuitive and user-friendly interface for an eco-friendly app promoting sustainable habits",
-      fullDescription: "Built a multi-threaded ticketing system with real-time updates. Used Java for concurrency handling, a React.js UI for visualization, and Node.js for backend logic. Ensured thread-safe ticket management, real-time communication via Web Sockets, and robust logging.",
+      shortDescription: "Designed Green Steps in Figma, a sustainability-focused app promoting eco-friendly habits through interactive features and user engagement.",
       image: "/Green-image.jpg",
-      technologies: ["Java", "React", "Node.js", "WebSockets"],
+      technologies: ["Figma"],
       year: "2024"
     },
     {
       id: 7,
       title: "Banking Transaction System",
-      shortDescription: "Developed a Python-based Banking Transaction System to monitor income, expenses, and budgets, featuring data visualization for enhanced financial planning and decision-making.",
+      shortDescription: "Built a Python app to track income, expenses, and budgets, with data visualization for better financial planning.",
       image: "/Banking-image.jpg",
-      technologies: ["Java"],
+      technologies: ["Python"],
       year: "2024"
     },
     {
       id: 8,
       title: "Student Management System",
-      shortDescription: "GUI Implementation with Tkinter and OOP principles.",
-      fullDescription: "A personal finance tracker with an intuitive GUI built using Tkinter. Implemented using object-oriented programming principles for maintainable and extensible code.",
+      shortDescription: "A Java-based application for managing student records, enabling efficient data entry, updates, and retrieval with a user-friendly interface.",
       image: "/Management-image.jpg",
       technologies: ["Java"],
       year: "2024"
