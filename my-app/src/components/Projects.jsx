@@ -93,7 +93,7 @@ const Projects = () => {
       <style jsx>{`
         .projects {
           padding: var(--section-padding);
-          background-color: #f8f9fa;
+          background-color:rgb(174, 194, 214);
         }
         
         .section-title {
