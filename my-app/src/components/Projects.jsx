@@ -67,7 +67,7 @@ const Projects = () => {
     },
     {
       id: 8,
-      title: "Enhanced Personal Finance Tracker",
+      title: "green steps",
       shortDescription: "GUI Implementation with Tkinter and OOP principles.",
       fullDescription: "A personal finance tracker with an intuitive GUI built using Tkinter. Implemented using object-oriented programming principles for maintainable and extensible code.",
       image: "/project-images/finance-tracker.jpg",
