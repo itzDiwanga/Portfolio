@@ -9,7 +9,7 @@ const Skills = () => {
     { id: 5, name: "Node.js", icon: "node-js", color: "#339933" },
     { id: 6, name: "Python", icon: "python", color: "#3776AB" },
     { id: 7, name: "Java", icon: "java", color: "#007396" },
-    { id: 8, name: "PHP", icon: "php", color: "#777BB4" },
+    { id: 8, name: "Figma", icon: "figma", color: "#F24E1E" },
     { id: 9, name: "SQL", icon: "database", color: "#4479A1" },
     { id: 10, name: "GitHub", icon: "github", color: "#181717" },
     { id: 11, name: "React Native", icon: "react", color: "#61DAFB" },

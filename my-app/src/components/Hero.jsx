@@ -54,7 +54,7 @@ const Hero = () => {
           display: flex;
           align-items: center;
           position: relative;
-          color: #00ff00;
+          color: #1baa9c;
           overflow: hidden;
           font-family: 'Montserrat', sans-serif;
         }
@@ -100,11 +100,11 @@ const Hero = () => {
           line-height: 1.2;
           font-weight: 700;
           letter-spacing: -0.5px;
-          color: #00ff00;
+          color: #1baa9c;
         }
         
         .hero-content h1 span {
-          color: #8067f0; /* Purple accent color */
+          color:rgb(255, 255, 255); /* Purple accent color */
           position: relative;
         }
         
@@ -115,7 +115,7 @@ const Hero = () => {
           left: 0;
           width: 0;
           height: 2px;
-          background-color: #8067f0;
+          background-color:rgb(244, 244, 244);
           animation: underline 1.5s ease forwards;
           animation-delay: 2s;
         }
@@ -128,7 +128,7 @@ const Hero = () => {
           font-size: 1.5rem;
           font-weight: 500;
           margin-bottom: 0.5rem;
-          color: #00ff00;
+          color: #1baa9c;
           letter-spacing: 0.5px;
         }
         
@@ -142,7 +142,7 @@ const Hero = () => {
         .job-title {
           font-size: 1.3rem;
           font-weight: 500;
-          color: #8067f0; /* Purple accent color */
+          color:rgb(255, 255, 255); /* Purple accent color */
           letter-spacing: 0.5px;
         }
         
@@ -166,7 +166,7 @@ const Hero = () => {
         .hero-content p {
           margin-bottom: 1.5rem;
           font-size: 1.1rem;
-          color: #00ff00;
+          color: #1baa9c;
           line-height: 1.7;
           letter-spacing: 0.2px;
           font-weight: 300;
@@ -193,26 +193,26 @@ const Hero = () => {
         
         .btn-primary {
           background-color: transparent;
-          color: #8067f0;
-          border: 2px solid #8067f0;
+          color: #1baa9c;
+          border: 2px solid #1baa9c;
           box-shadow: none;
         }
         
         .btn-primary:hover {
-          background-color: #8067f0;
+          background-color: #1baa9c;
           color: #ffffff;
           box-shadow: 0 6px 20px rgba(128, 103, 240, 0.4);
         }
         
         .btn-outline {
           background: transparent;
-          border: 2px solid #8067f0;
-          color: #8067f0;
+          border: 2px solid #1baa9c;
+          color: #1baa9c;
           box-shadow: none;
         }
         
         .btn-outline:hover {
-          background: #8067f0;
+          background: #1baa9c;
           color: #ffffff;
           box-shadow: 0 6px 20px rgba(128, 103, 240, 0.4);
         }
@@ -255,7 +255,7 @@ const Hero = () => {
           height: 350px;
           object-fit: cover;
           border-radius: 50%;
-          border: 5px solid #8067f0;
+          border: 5px solid  #1baa9c;
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
         
