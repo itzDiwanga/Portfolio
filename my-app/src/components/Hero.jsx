@@ -54,7 +54,7 @@ const Hero = () => {
           display: flex;
           align-items: center;
           position: relative;
-          color: #ffffff;
+          color: #00ff00;
           overflow: hidden;
           font-family: 'Montserrat', sans-serif;
         }
@@ -100,7 +100,7 @@ const Hero = () => {
           line-height: 1.2;
           font-weight: 700;
           letter-spacing: -0.5px;
-          color: #ffffff;
+          color: #00ff00;
         }
         
         .hero-content h1 span {
@@ -128,7 +128,7 @@ const Hero = () => {
           font-size: 1.5rem;
           font-weight: 500;
           margin-bottom: 0.5rem;
-          color: #e0e0e0;
+          color: #00ff00;
           letter-spacing: 0.5px;
         }
         
@@ -166,7 +166,7 @@ const Hero = () => {
         .hero-content p {
           margin-bottom: 1.5rem;
           font-size: 1.1rem;
-          color: #bcbcbc;
+          color: #00ff00;
           line-height: 1.7;
           letter-spacing: 0.2px;
           font-weight: 300;

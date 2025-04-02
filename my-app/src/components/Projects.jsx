@@ -8,7 +8,7 @@ const Projects = () => {
       title: "Mental Health Companion App",
       shortDescription: "An application providing emotional support and guidance.",
       fullDescription: "A mental health application aimed at providing ongoing emotional support and guidance, connecting professional therapy sessions with everyday life. The app offers features like anonymous chat rooms, mood detection through text analysis, therapist and peer mentorship matching, AI-driven personalized suggestions, and real-time reminders for self-care.",
-      image: "/project-images/mental-health-app.jpg",
+      image: "/mental-health-app.jpg",
       technologies: ["React Native", "Node.js", "MongoDB"],
       status: "Ongoing Project"
     },
@@ -17,7 +17,7 @@ const Projects = () => {
       title: "Property Search Web App",
       shortDescription: "React-based property search app with interactive filters.",
       fullDescription: "Developed a React-based property search web app with interactive filters, dynamic JSON data retrieval, and a responsive UI. Implemented features like a favorites list with local storage, image viewer, React Tabs for property details, and security best practices.",
-      image: "/project-images/property-search.jpg",
+      image: "/property-search.jpg",
       technologies: ["React", "JavaScript", "HTML", "CSS"],
       year: "2024"
     },
@@ -82,12 +82,7 @@ const Projects = () => {
       <div className="container">
         <h2 className="section-title">Projects</h2>
         
-        <div className="projects-filter">
-          <button className="filter-btn active">All</button>
-          <button className="filter-btn">Web</button>
-          <button className="filter-btn">Mobile</button>
-          <button className="filter-btn">Desktop</button>
-        </div>
+        {/* Filter buttons removed */}
         
         <div className="projects-grid">
           {projectsData.map((project) => (
@@ -100,6 +95,25 @@ const Projects = () => {
         .projects {
           padding: var(--section-padding);
           background-color: #f8f9fa;
+        }
+        
+        .section-title {
+          text-align: center;
+          font-size: 2.5rem;
+          margin-bottom: 3rem;
+          position: relative;
+          color: #333;
+        }
+        
+        .section-title::after {
+          content: '';
+          position: absolute;
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 80px;
+          height: 4px;
+          background-color: #16a085;
         }
         
         .projects-filter {
@@ -122,15 +136,15 @@ const Projects = () => {
         }
         
         .filter-btn:hover {
-          background-color: var(--primary);
+          background-color: #16a085;
           color: white;
-          border-color: var(--primary);
+          border-color: #16a085;
         }
         
         .filter-btn.active {
-          background-color: var(--primary);
+          background-color: #16a085;
           color: white;
-          border-color: var(--primary);
+          border-color: #16a085;
         }
         
         .projects-grid {
@@ -143,6 +157,18 @@ const Projects = () => {
           .projects-grid {
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
           }
+          
+          .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+          }
+        }
+        
+        :root {
+          --primary: #16a085;
+          --dark: #333;
+          --gray: #666;
+          --section-padding: 5rem 0;
         }
       `}</style>
     </section>
