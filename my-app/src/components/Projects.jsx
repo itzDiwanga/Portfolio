@@ -7,7 +7,6 @@ const Projects = () => {
       id: 1,
       title: "Mental Health Companion App",
       shortDescription: "An application providing emotional support and guidance.",
-      fullDescription: "A mental health application aimed at providing ongoing emotional support and guidance, connecting professional therapy sessions with everyday life. The app offers features like anonymous chat rooms, mood detection through text analysis, therapist and peer mentorship matching, AI-driven personalized suggestions, and real-time reminders for self-care.",
       image: "/mental-health-app.jpg",
       technologies: ["React Native", "Node.js", "MongoDB"],
       status: "Ongoing Project"
@@ -23,37 +22,37 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "Sri Community Development Foundation Website",
+      title: "Selena Gomez Portfolio Website",
       shortDescription: "A fully responsive React and Node based charity platform.",
       fullDescription: "A fully responsive React and Node based charity platform showcasing the humanitarian initiatives. Features include project galleries with multimedia content, assistance request forms, volunteer registration, and media validation.",
-      image: "/project-images/foundation-website.jpg",
+      image: "/Selena-website.jpg",
       technologies: ["React", "Node.js", "MongoDB"],
       year: "2024"
     },
     {
       id: 4,
-      title: "Digital Identity Verification System",
+      title: "Oceanauts Web Application",
       shortDescription: "A secure and decentralized digital identity verification platform.",
       fullDescription: "Trustify is a secure and decentralized digital identity verification platform designed to enhance trust, privacy, and efficiency in identity management. Leveraging blockchain technology, the system ensures tamper-proof identity verification.",
-      image: "/project-images/identity-verification.jpg",
+      image: "/Oceanauts-image.jpg",
       technologies: ["Blockchain", "React", "Node", "MongoDB"],
       year: "2024"
     },
     {
       id: 5,
-      title: "Personal Portfolio Website",
+      title: "Real Time Ticketing System",
       shortDescription: "Responsive personal portfolio website with modern UI.",
       fullDescription: "Designed and developed a responsive personal portfolio website using HTML, CSS, and JavaScript. The project features a clean, modern UI with interactive elements including hover animations effect, hover states, and smooth scrolling navigation.",
-      image: "/project-images/portfolio-website.jpg",
+      image: "/Ticketing-image.jpg",
       technologies: ["HTML", "CSS", "JavaScript"],
       year: "2024"
     },
     {
       id: 6,
-      title: "Real-Time Ticketing System",
-      shortDescription: "Multi-threaded ticketing system with real-time updates.",
+      title: "Green Steps App",
+      shortDescription: "Designed an intuitive and user-friendly interface for an eco-friendly app promoting sustainable habits",
       fullDescription: "Built a multi-threaded ticketing system with real-time updates. Used Java for concurrency handling, a React.js UI for visualization, and Node.js for backend logic. Ensured thread-safe ticket management, real-time communication via Web Sockets, and robust logging.",
-      image: "/project-images/ticketing-system.jpg",
+      image: "/Green-image.jpg",
       technologies: ["Java", "React", "Node.js", "WebSockets"],
       year: "2024"
     },
