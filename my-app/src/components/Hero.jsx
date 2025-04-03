@@ -4,7 +4,7 @@ const Hero = () => {
   const [text, setText] = useState('');
   const [isTypingComplete, setIsTypingComplete] = useState(false);
   
-  const fullText = "UI/UX Designer & Frontend Developer";
+  const fullText = "UI/UX Designer & Full-stack developer";
   const typingSpeed = 100; // milliseconds per character
   
   useEffect(() => {
