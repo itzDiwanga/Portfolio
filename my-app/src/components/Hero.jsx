@@ -39,7 +39,22 @@ const Hero = () => {
           <div className="hero-buttons">
             <a href="#contact" className="btn btn-primary">Contact Me</a>
             <a href="#projects" className="btn btn-outline">View My Work</a>
-            <a href="/Diwanga_Munasinghe_CV.pdf" download className="btn btn-cv">Download CV</a>
+            
+            {/* Option 1: Minimal Text-only Button */}
+            <a href="/Diwanga_Munasinghe_CV.pdf" download className="btn btn-download">Download CV</a>
+            
+            {/* Option 2: Icon Button 
+            <a href="/Diwanga_Munasinghe_CV.pdf" download className="btn btn-icon">
+              <span className="icon">📄</span>
+              <span>CV</span>
+            </a>
+            */}
+            
+            {/* Option 3: Outlined Button with Download Icon 
+            <a href="/Diwanga_Munasinghe_CV.pdf" download className="btn btn-download-outline">
+              <span className="download-icon">↓</span> Download CV
+            </a>
+            */}
           </div>
         </div>
         <div className="hero-image">
@@ -219,27 +234,60 @@ const Hero = () => {
           box-shadow: 0 6px 20px rgba(128, 103, 240, 0.4);
         }
         
-        .btn-cv {
-          background: #1baa9c;
-          border: 2px solid #1baa9c;
+        /* Option 1: Minimal Text-only Button */
+        .btn-download {
+          background: rgba(255, 255, 255, 0.1);
           color: #ffffff;
-          box-shadow: 0 4px 15px rgba(27, 170, 156, 0.3);
+          border: none;
+          backdrop-filter: blur(5px);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-download:hover {
+          background: rgba(27, 170, 156, 0.2);
+          color: #1baa9c;
+        }
+        
+        /* Option 2: Icon Button */
+        .btn-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgba(255, 255, 255, 0.05);
+          color: #ffffff;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          padding: 0.9rem 1.5rem;
+          gap: 8px;
+          backdrop-filter: blur(5px);
+        }
+        
+        .btn-icon:hover {
+          background: rgba(27, 170, 156, 0.1);
+          border-color: #1baa9c;
+        }
+        
+        .btn-icon .icon {
+          font-size: 1.2rem;
+        }
+        
+        /* Option 3: Outlined Button with Download Icon */
+        .btn-download-outline {
+          background: transparent;
+          color: #ffffff;
+          border: 1px solid rgba(255, 255, 255, 0.3);
           display: flex;
           align-items: center;
           gap: 8px;
         }
         
-        .btn-cv:hover {
-          background: transparent;
+        .btn-download-outline:hover {
+          border-color: #1baa9c;
           color: #1baa9c;
-          box-shadow: none;
         }
         
-        .btn-cv::before {
-          content: "↓";
+        .download-icon {
           font-weight: bold;
-          display: inline-block;
-          margin-right: 5px;
+          font-size: 1.1rem;
         }
         
         .hero-image {
