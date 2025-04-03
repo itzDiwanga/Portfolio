@@ -39,6 +39,7 @@ const Hero = () => {
           <div className="hero-buttons">
             <a href="#contact" className="btn btn-primary">Contact Me</a>
             <a href="#projects" className="btn btn-outline">View My Work</a>
+            <a href="/Diwanga_Munasinghe_CV.pdf" download className="btn btn-cv">Download CV</a>
           </div>
         </div>
         <div className="hero-image">
@@ -176,6 +177,7 @@ const Hero = () => {
           display: flex;
           gap: 1rem;
           margin-top: 2rem;
+          flex-wrap: wrap;
         }
         
         .btn {
@@ -215,6 +217,29 @@ const Hero = () => {
           background: #1baa9c;
           color: #ffffff;
           box-shadow: 0 6px 20px rgba(128, 103, 240, 0.4);
+        }
+        
+        .btn-cv {
+          background: #1baa9c;
+          border: 2px solid #1baa9c;
+          color: #ffffff;
+          box-shadow: 0 4px 15px rgba(27, 170, 156, 0.3);
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        
+        .btn-cv:hover {
+          background: transparent;
+          color: #1baa9c;
+          box-shadow: none;
+        }
+        
+        .btn-cv::before {
+          content: "↓";
+          font-weight: bold;
+          display: inline-block;
+          margin-right: 5px;
         }
         
         .hero-image {
