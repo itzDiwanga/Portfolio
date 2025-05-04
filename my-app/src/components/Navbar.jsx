@@ -111,12 +111,12 @@ const Navbar = () => {
           left: 0;
           width: 0;
           height: 2px;
-          background-color: #8067f0;
+          background-color:rgb(15, 126, 39);
           transition: width 0.3s ease;
         }
         
         .nav-links li a:hover {
-          color: #8067f0;
+          color:rgb(2, 65, 21);
         }
         
         .nav-links li a:hover::after {
